@@ -1,6 +1,6 @@
 pipeline:
-  name: "vivek_git_pipeline_2"
-  identifier: "vivek_git_pipeline_2"
+  name: "vivek_pipeline_3"
+  identifier: "vivek_pipeline_3"
   projectIdentifier: "Ramyasimplegit"
   orgIdentifier: "default"
   tags: {}
