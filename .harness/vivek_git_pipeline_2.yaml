@@ -1,31 +1,31 @@
 pipeline:
-    name: vivek_git_pipeline_2
-    identifier: vivek_git_pipeline_2
-    projectIdentifier: Ramyasimplegit
-    orgIdentifier: default
-    tags: {}
-    stages:
-        - stage:
-              name: approval 1
-              identifier: approval_1
-              description: "This is to imported from Git"
-              type: Approval
+  name: "vivek_git_pipeline_2"
+  identifier: "vivek_git_pipeline_2"
+  projectIdentifier: "Ramyasimplegit"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "approval 1"
+      identifier: "approval_1"
+      description: "This is to imported from Git"
+      type: "Approval"
+      spec:
+        execution:
+          steps:
+          - step:
+              name: "approval 1"
+              identifier: "approval_1"
+              type: "HarnessApproval"
+              timeout: "1d"
               spec:
-                  execution:
-                      steps:
-                          - step:
-                                name: approval 1
-                                identifier: approval_1
-                                type: HarnessApproval
-                                timeout: 1d
-                                spec:
-                                    approvalMessage: |-
-                                        Please review the following information
-                                        and approve the pipeline progression
-                                    includePipelineExecutionHistory: true
-                                    approvers:
-                                        minimumCount: 1
-                                        disallowPipelineExecutor: false
-                                        userGroups: <+input>
-                                    approverInputs: []
-              tags: {}
+                approvalMessage: "Please review the following information\nand approve\
+                  \ the pipeline progression"
+                includePipelineExecutionHistory: true
+                approvers:
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                  userGroups: "<+input>"
+                approverInputs: []
+      tags: {}
+  description: ""
