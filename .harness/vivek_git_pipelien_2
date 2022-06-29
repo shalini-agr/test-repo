@@ -6,9 +6,9 @@ pipeline:
     tags: {}
     stages:
         - stage:
-              name: approval 2
-              identifier: approval_2
-              description: ""
+              name: approval 1
+              identifier: approval_1
+              description: "This is to imported from Git"
               type: Approval
               spec:
                   execution:
