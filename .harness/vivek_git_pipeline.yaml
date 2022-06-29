@@ -1,0 +1,31 @@
+pipeline:
+    name: vivek_git_pipeline
+    identifier: vivek_git_pipeline
+    projectIdentifier: Ramyasimplegit
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: approval 1
+              identifier: approval_1
+              description: ""
+              type: Approval
+              spec:
+                  execution:
+                      steps:
+                          - step:
+                                name: approval 1
+                                identifier: approval_1
+                                type: HarnessApproval
+                                timeout: 1d
+                                spec:
+                                    approvalMessage: |-
+                                        Please review the following information
+                                        and approve the pipeline progression
+                                    includePipelineExecutionHistory: true
+                                    approvers:
+                                        minimumCount: 1
+                                        disallowPipelineExecutor: false
+                                        userGroups: <+input>
+                                    approverInputs: []
+              tags: {}
