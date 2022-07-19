@@ -1,7 +1,7 @@
 pipeline:
     name: vivek_git_pipeline
     identifier: vivek_git_pipeline
-    projectIdentifier: edited
+    projectIdentifier: cd_test
     orgIdentifier: default
     tags: {}
     stages:
