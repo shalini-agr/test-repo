@@ -1,13 +1,13 @@
 pipeline:
-    name: vivek_git_pipeline2
-    identifier: vivek_git_pipeline2
+    name: vivek_git_pipeline
+    identifier: vivek_git_pipeline
     projectIdentifier: cd_test
     orgIdentifier: default
     tags: {}
     stages:
         - stage:
-              name: approval 2
-              identifier: approval_2
+              name: approval 1
+              identifier: approval_1
               description: ""
               type: Approval
               spec:
