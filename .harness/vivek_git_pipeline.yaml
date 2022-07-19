@@ -1,5 +1,5 @@
 pipeline:
-    name: vivek_git_pipeline
+    name: vivek_git_pipeline2
     identifier: vivek_git_pipeline
     projectIdentifier: cd_test
     orgIdentifier: default
