@@ -1,6 +1,6 @@
 pipeline:
-    name: vivek_git_pipeline3
-    identifier: vivek_git_pipeline3
+    name: vivek_git_pipeline
+    identifier: vivek_git_pipeline
     projectIdentifier: cd_test
     orgIdentifier: default
     tags: {}
