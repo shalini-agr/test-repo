@@ -1,0 +1,21 @@
+inputSet:
+  identifier: "vivek_git_inputset"
+  name: "vivek_git_inputset"
+  orgIdentifier: "default"
+  projectIdentifier: "cd_test"
+  pipeline:
+    identifier: "vivek_git_pipeline"
+    stages:
+    - stage:
+        identifier: "approval_1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "approval_1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    userGroups:
+                    - "account.admins_and_defaults"
