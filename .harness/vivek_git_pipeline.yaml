@@ -29,3 +29,16 @@ pipeline:
                                         userGroups: <+input>
                                     approverInputs: []
               tags: {}
+    notificationRules:
+        - name: vivek
+          identifier: vivek
+          pipelineEvents:
+              - type: PipelineStart
+          notificationMethod:
+              type: Email
+              spec:
+                  userGroups: []
+                  recipients:
+                      - vivek.dixit@harness.io
+                      - brijesh.dhakar@harness.io
+          enabled: true
