@@ -1,6 +1,6 @@
 inputSet:
-  identifier: "vivek_git_inputset2"
-  name: "vivek_git_inputset2"
+  identifier: "vivek_git_inputset"
+  name: "vivek_git_inputset"
   orgIdentifier: "default"
   projectIdentifier: "cd_test"
   pipeline:
