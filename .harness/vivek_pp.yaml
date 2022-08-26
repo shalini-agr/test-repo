@@ -1,0 +1,32 @@
+pipeline:
+  name: vivek_pp
+  identifier: vivek_pp
+  projectIdentifier: mohit_test_25_aug
+  orgIdentifier: AAAsunnyGitExp
+  tags: {}
+  stages:
+    - stage:
+        name: app1
+        identifier: app1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: app1
+                  identifier: app1
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account.UserGroupWithNoPermission
+                    approverInputs: []
+        tags: {}
