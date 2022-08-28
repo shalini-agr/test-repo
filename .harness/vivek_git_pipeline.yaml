@@ -1,43 +1,22 @@
-pipeline:
-    name: vivek_git_pipeline
-    identifier: vivek_git_pipeline
-    projectIdentifier: proj1
-    orgIdentifier: default
-    tags: {}
-    stages:
-        - stage:
-              name: approval 1
-              identifier: approval_1
-              description: ""
-              type: Approval
-              spec:
-                  execution:
-                      steps:
-                          - step:
-                                name: approval 1
-                                identifier: approval_1
-                                type: HarnessApproval
-                                timeout: 1d
-                                spec:
-                                    approvalMessage: |-
-                                        Please review the following information
-                                        and approve the pipeline progression
-                                    includePipelineExecutionHistory: true
-                                    approvers:
-                                        minimumCount: 1
-                                        disallowPipelineExecutor: false
-                                        userGroups: <+input>
-                                    approverInputs: []
-              tags: {}
-    notificationRules:
-        - name: vivek
-          identifier: vivek
-          pipelineEvents:
-              - type: PipelineStart
-          notificationMethod:
-              type: Email
-              spec:
-                  userGroups: []
-                  recipients:
-                      - vivek.dixit@harness.io
-                      - brijesh.dhakar@harness.io
+connector:
+  name: conn1
+  identifier: conn1
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: proj1
+  type: Github
+  spec:
+    url: https://github.com/senjucanon2/test-repo.git
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: senjucanon2
+          tokenRef: secret_vivek
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: secret_vivek
+    executeOnDelegate: false
+    type: Repo
