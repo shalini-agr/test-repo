@@ -2,7 +2,7 @@ pipeline:
     name: vivek_git_pipeline
     identifier: vivek_git_pipeline
     projectIdentifier: NGPipeAutoDemoProSSHuQoGAIRrjA
-    orgIdentifier: default
+    orgIdentifier: SSH_test_Org
     tags: {}
     stages:
         - stage:
