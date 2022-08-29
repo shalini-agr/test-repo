@@ -1,7 +1,7 @@
 pipeline:
     name: vivek_git_pipeline
     identifier: vivek_git_pipeline
-    projectIdentifier: proj1
+    projectIdentifier: NGPipeAutoDemoProSSHuQoGAIRrjA
     orgIdentifier: default
     tags: {}
     stages:
