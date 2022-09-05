@@ -30,3 +30,14 @@ pipeline:
                         - usergrp1
                     approverInputs: []
         tags: {}
+  notificationRules:
+    - name: slack
+      identifier: slack
+      pipelineEvents:
+        - type: AllEvents
+      notificationMethod:
+        type: Slack
+        spec:
+          userGroups: []
+          webhookUrl: https://hooks.slack.com/services/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
+      enabled: true
