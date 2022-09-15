@@ -14,18 +14,17 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: ap1
-                  identifier: ap1
-                  type: HarnessApproval
-                  timeout: 1d
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
                   spec:
-                    approvalMessage: |-
-                      Please review the following information
-                      and approve the pipeline progression
-                    includePipelineExecutionHistory: true
-                    approvers:
-                      minimumCount: 1
-                      disallowPipelineExecutor: false
-                      userGroups: <+input>
-                    approverInputs: []
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
         tags: {}
