@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo "Hello Other Branch Save"
+                        script: echo "Hello Other Branch Save2"
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
