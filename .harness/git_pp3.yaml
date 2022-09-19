@@ -28,3 +28,18 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: ap2
+        identifier: ap2
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: step2
+                  identifier: step2
+                  template:
+                    templateRef: step_tmplt
+                    versionLabel: Version1
+        tags: {}
