@@ -1,0 +1,30 @@
+pipeline:
+  name: git_pp3
+  identifier: git_pp3
+  projectIdentifier: vivek_proj_stree
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ap1
+        identifier: ap1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Another_Stage"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
