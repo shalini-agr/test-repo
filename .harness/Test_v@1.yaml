@@ -1,0 +1,19 @@
+template:
+  name: Test
+  identifier: Test
+  versionLabel: v@1
+  type: Stage
+  projectIdentifier: mohit_test_25_aug
+  orgIdentifier: AAAsunnyGitExp
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: h bh
+              identifier: h_bh
+              template:
+                templateRef: account.asdasd
+                versionLabel: v1
