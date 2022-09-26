@@ -14,14 +14,17 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: s1
-                  identifier: s1
-                  template:
-                    templateRef: t1
-                    versionLabel: v1
-                    templateInputs:
-                      type: HarnessApproval
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
                       spec:
-                        approvers:
-                          userGroups: <+input>
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
         tags: {}
