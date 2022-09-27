@@ -1,4 +1,9 @@
 pipeline:
+  name: git_pp
+  identifier: git_pp
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
   stages:
     - stage:
         name: s1
