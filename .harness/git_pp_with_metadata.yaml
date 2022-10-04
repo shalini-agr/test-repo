@@ -22,9 +22,8 @@ pipeline:
                     approvalMessage: Please review the following information......
                     includePipelineExecutionHistory: true
                     approvers:
-                      minimumCount: 1
+                      minimumCount: <+input>
                       disallowPipelineExecutor: false
-                      userGroups:
-                        - _project_all_users
+                      userGroups: <+input>
                     approverInputs: []
         tags: {}
