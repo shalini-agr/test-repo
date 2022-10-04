@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "isgit"
+  name: "isgit"
+  orgIdentifier: "default"
+  projectIdentifier: "proj1"
+  pipeline:
+    identifier: "git_pp_with_metadata"
+    stages:
+    - stage:
+        identifier: "s1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "ap1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    minimumCount: 1
+                    userGroups:
+                    - "_project_all_users"
