@@ -22,7 +22,7 @@ pipeline:
             infrastructureDefinition:
               type: KubernetesDirect
               spec:
-                connectorRef: k8s_con_tofail
+                connectorRef: k8s_con_tisuccess
                 namespace: n1
                 releaseName: release-<+INFRA_KEY>
             allowSimultaneousDeployments: false
