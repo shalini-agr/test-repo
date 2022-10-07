@@ -1,0 +1,17 @@
+connector:
+  name: k8s_con_tofail
+  identifier: k8s_con_tofail
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: proj1
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://34.69.2.190/
+        auth:
+          type: UsernamePassword
+          spec:
+            username: ' nvh'
+            passwordRef: secret_to_fail
