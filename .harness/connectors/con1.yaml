@@ -6,7 +6,8 @@ connector:
   projectIdentifier: vivek_proj_old_git
   type: Github
   spec:
-    url: https://github.com/senjucanon2/test-repo.git
+    url: https://github.com/senjucanon2/
+    validationRepo: test-repo2.git
     authentication:
       type: Http
       spec:
@@ -19,4 +20,4 @@ connector:
       spec:
         tokenRef: vivek_secret_con
     executeOnDelegate: false
-    type: Repo
+    type: Account
