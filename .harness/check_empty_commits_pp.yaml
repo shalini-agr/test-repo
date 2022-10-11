@@ -1,0 +1,30 @@
+pipeline:
+  name: check_empty_commits_pp
+  identifier: check_empty_commits_pp
+  projectIdentifier: vivek_qa_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ap1
+        identifier: ap1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ap1
+                  identifier: ap1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
