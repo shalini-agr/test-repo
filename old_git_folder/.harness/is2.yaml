@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "is2"
+  name: "is2"
+  orgIdentifier: "default"
+  projectIdentifier: "proj1"
+  pipeline:
+    identifier: "old_git_pp"
+    stages:
+    - stage:
+        identifier: "ap1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "ap1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    minimumCount: 1
+                    userGroups:
+                    - "account._account_all_users"
