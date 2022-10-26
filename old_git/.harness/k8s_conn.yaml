@@ -9,7 +9,7 @@ connector:
     credential:
       type: ManualConfig
       spec:
-        masterUrl: https://ab.cd.ef.ghi/
+        masterUrl: https://34.67.13.218/
         auth:
           type: UsernamePassword
           spec:
