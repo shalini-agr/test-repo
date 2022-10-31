@@ -1,6 +1,6 @@
 pipeline:
-  name: p1
-  identifier: p1
+  name: git_p1
+  identifier: git_p1
   projectIdentifier: default_project
   orgIdentifier: default
   tags: {}
