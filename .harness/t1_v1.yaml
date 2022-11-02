@@ -1,0 +1,19 @@
+template:
+  name: t1
+  type: Step
+  projectIdentifier: vivek_proj1_qa
+  orgIdentifier: default
+  spec:
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo "Hello World!"
+      environmentVariables: []
+      outputVariables: []
+    timeout: 10m
+  identifier: t1
+  versionLabel: v1
