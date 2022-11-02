@@ -1,0 +1,23 @@
+---
+pipeline:
+  projectIdentifier: "vivek_proj1_qa"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "s1"
+      identifier: "s1"
+      description: ""
+      type: "Approval"
+      spec:
+        execution:
+          steps:
+          - step:
+              name: "sh1"
+              identifier: "sh1"
+              template:
+                templateRef: "t1"
+                versionLabel: "v1"
+      tags: {}
+  identifier: "remote_qa_Clone"
+  name: "remote_qa - Clone"
