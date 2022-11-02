@@ -14,9 +14,17 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: ShellScript
                   name: sh1
                   identifier: sh1
-                  template:
-                    templateRef: t1
-                    versionLabel: v1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
         tags: {}
