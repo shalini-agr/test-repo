@@ -1,32 +1,22 @@
-pipeline:
-  name: adi_remote
-  identifier: adi_remote
-  projectIdentifier: proj1
+connector:
+  name: github_con
+  identifier: github_con
+  description: ""
   orgIdentifier: default
-  tags: {}
-  stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Approval
+  projectIdentifier: proj1
+  type: Github
+  spec:
+    url: https://github.com/senjucanon2/test-repo.git
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
         spec:
-          execution:
-            steps:
-              - step:
-                  name: ap1
-                  identifier: ap1
-                  type: HarnessApproval
-                  timeout: 1d
-                  spec:
-                    approvalMessage: |-
-                      Please review the following information
-                      and approve the pipeline progression
-                    includePipelineExecutionHistory: true
-                    approvers:
-                      minimumCount: 1
-                      disallowPipelineExecutor: false
-                      userGroups:
-                        - account._account_all_users
-                    approverInputs: []
-        tags: {}
+          username: senjucanon2
+          tokenRef: vivek_secret_github
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: vivek_secret_github
+    executeOnDelegate: false
+    type: Repo
