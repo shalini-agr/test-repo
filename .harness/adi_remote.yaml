@@ -4,6 +4,7 @@ pipeline:
   projectIdentifier: proj1
   orgIdentifier: default
   tags: {}
+  stages:
     - stage:
         name: s1
         identifier: s1
