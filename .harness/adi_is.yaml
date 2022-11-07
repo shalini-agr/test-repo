@@ -1,0 +1,22 @@
+inputSet:
+  identifier: "adi_is"
+  name: "adi_is"
+  orgIdentifier: "default"
+  projectIdentifier: "proj1"
+  pipeline:
+    identifier: "adi_is_remote"
+    stages:
+    - stage:
+        identifier: "ap1"
+        type: "Approval"
+        spec:
+          execution:
+            steps:
+            - step:
+                identifier: "ap1"
+                type: "HarnessApproval"
+                spec:
+                  approvers:
+                    minimumCount: 1
+                    userGroups:
+                    - "account._account_all_users"
