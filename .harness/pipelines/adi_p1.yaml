@@ -1,0 +1,30 @@
+pipeline:
+  name: adi_p1
+  identifier: adi_p1
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: adi_s1
+        identifier: adi_s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
