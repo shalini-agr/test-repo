@@ -1,30 +1,19 @@
-pipeline:
-  name: remote_p1
-  identifier: remote_p1
+template:
+  name: t1_remote
+  type: Step
   projectIdentifier: proj1
   orgIdentifier: default
-  tags: {}
-  stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Approval
+  spec:
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
         spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: sh1
-                  identifier: sh1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo "Hello"
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
+          script: echo "Hello World"
+      environmentVariables: []
+      outputVariables: []
+    timeout: 10m
+  identifier: t1_remote
+  versionLabel: v1
