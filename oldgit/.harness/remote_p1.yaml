@@ -31,6 +31,6 @@ pipeline:
   variables:
     - name: Users
       type: String
-      default: "7"
+      default: ""
       description: ""
       value: <+input>.allowedValues(1,2,3,7)
