@@ -1,22 +1,20 @@
-inputSet:
-  identifier: "is1"
-  name: "is1"
-  orgIdentifier: "default"
-  projectIdentifier: "new_git_exp_proj"
-  pipeline:
-    identifier: "p1_is_test"
-    stages:
-    - stage:
-        identifier: "s1"
-        type: "Approval"
+template:
+  name: remote_p1
+  identifier: remote_p1
+  versionLabel: v1
+  type: Step
+  projectIdentifier: new_git_exp_proj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
         spec:
-          execution:
-            steps:
-            - step:
-                identifier: "ap1"
-                type: "HarnessApproval"
-                spec:
-                  approvers:
-                    minimumCount: 1
-                    userGroups:
-                    - "account._account_all_users"
+          script: echo "Hello"
+      environmentVariables: []
+      outputVariables: []
