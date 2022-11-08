@@ -15,7 +15,7 @@ pipeline:
             steps:
               - step:
                   type: ShellScript
-                  name: sh1
+                  name: sh12
                   identifier: sh1
                   spec:
                     shell: Bash
