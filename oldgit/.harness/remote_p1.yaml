@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo <+pipeline.variables.Users>
+                        script: echo "Hello"
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
