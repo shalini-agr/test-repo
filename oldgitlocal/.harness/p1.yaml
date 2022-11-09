@@ -28,9 +28,3 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
-  variables:
-    - name: ACCOUNT
-      type: String
-      default: "80"
-      description: ""
-      value: <+input>.allowedValues(80,81,82)
