@@ -29,7 +29,7 @@ pipeline:
                   timeout: 10m
         tags: {}
   variables:
-    - name: Users
+    - name: ACCOUNT
       type: String
       default: "80"
       description: ""
