@@ -1,30 +1,22 @@
-pipeline:
-  name: p1
-  identifier: p1
-  projectIdentifier: new_gitexp_proj
+connector:
+  name: github_con
+  identifier: github_con
+  description: ""
   orgIdentifier: default
-  tags: {}
-  stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Approval
+  projectIdentifier: new_gitexp_proj
+  type: Github
+  spec:
+    url: https://github.com/senjucanon2/test-repo.git
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
         spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: sh1
-                  identifier: sh1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo "Hello"
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
+          username: senjucanon2
+          tokenRef: github_con_sec
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: github_con_sec
+    executeOnDelegate: false
+    type: Repo
