@@ -1,0 +1,11 @@
+inputSet:
+  identifier: "islocalmain"
+  name: "is-local-main"
+  orgIdentifier: "default"
+  projectIdentifier: "old_git_proj1"
+  pipeline:
+    identifier: "p1"
+    variables:
+    - name: "Users"
+      type: "Number"
+      value: 81
