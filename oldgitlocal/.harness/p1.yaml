@@ -28,3 +28,9 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  variables:
+    - name: Users
+      type: Number
+      default: 1
+      description: ""
+      value: <+input>.allowedValues(1,2,3,4,7)
