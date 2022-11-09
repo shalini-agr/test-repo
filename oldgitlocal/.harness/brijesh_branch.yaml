@@ -1,0 +1,29 @@
+pipeline:
+  name: brijesh_branch
+  identifier: brijesh_branch
+  projectIdentifier: old_git_proj1
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: HarnessApproval
+                  name: ap1
+                  identifier: ap1
+                  spec:
+                    approvalMessage: Please review the following information and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      userGroups: <+input>
+                      minimumCount: <+input>
+                      disallowPipelineExecutor: false
+                    approverInputs: []
+                  timeout: 1d
+        tags: {}
