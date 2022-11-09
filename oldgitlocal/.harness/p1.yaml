@@ -33,4 +33,4 @@ pipeline:
       type: Number
       default: 1
       description: ""
-      value: <+input>.allowedValues(1,2,3,4,7)
+      value: "7"
