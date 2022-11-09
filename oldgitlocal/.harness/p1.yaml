@@ -30,7 +30,7 @@ pipeline:
         tags: {}
   variables:
     - name: Users
-      type: Number
-      default: 1
+      type: String
+      default: "80"
       description: ""
-      value: <+input>.allowedValues(80, 81, 82)
+      value: <+input>.allowedValues(80,81,82)
