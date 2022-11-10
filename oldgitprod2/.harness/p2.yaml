@@ -1,0 +1,36 @@
+pipeline:
+  name: p2
+  identifier: p2
+  projectIdentifier: proj2inlinetest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
+  variables:
+    - name: ACCOUNT
+      type: String
+      default: "4"
+      description: ""
+      value: <+input>.allowedValues(1,2,3,4)
