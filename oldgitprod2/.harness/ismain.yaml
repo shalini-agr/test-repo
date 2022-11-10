@@ -1,0 +1,11 @@
+inputSet:
+  identifier: "ismain"
+  name: "is-main"
+  orgIdentifier: "default"
+  projectIdentifier: "vivek_prod2_proj_oldgit"
+  pipeline:
+    identifier: "p1"
+    variables:
+    - name: "ACCOUNT"
+      type: "String"
+      value: "3"
