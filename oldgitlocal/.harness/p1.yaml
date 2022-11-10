@@ -28,3 +28,8 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  variables:
+    - name: ACCOUNT
+      type: String
+      description: ""
+      value: <+input>
