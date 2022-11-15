@@ -1,0 +1,17 @@
+connector:
+  name: k8s_con1
+  identifier: k8s_con1
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: old_git_proj1
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://34.67.13.218/
+        auth:
+          type: UsernamePassword
+          spec:
+            username: admin
+            passwordRef: k8s_con_secret
