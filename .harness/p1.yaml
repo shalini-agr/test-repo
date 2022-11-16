@@ -19,4 +19,10 @@ pipeline:
                   template:
                     templateRef: stept1
                     versionLabel: v1
+                    templateInputs:
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                          userGroups: <+input>
         tags: {}
