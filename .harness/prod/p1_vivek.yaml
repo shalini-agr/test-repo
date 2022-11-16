@@ -1,0 +1,28 @@
+pipeline:
+  name: p1_vivek
+  identifier: p1_vivek
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: ap1
+                  identifier: ap1
+                  template:
+                    templateRef: stept1
+                    versionLabel: v1
+                    templateInputs:
+                      type: HarnessApproval
+                      spec:
+                        approvers:
+                          minimumCount: <+input>
+                          userGroups: <+input>
+        tags: {}
