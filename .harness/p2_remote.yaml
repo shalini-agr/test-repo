@@ -1,31 +1,17 @@
-pipeline:
-  name: p2_remote
-  identifier: p2_remote
-  projectIdentifier: proj1_newgitx
+connector:
+  name: k88
+  identifier: k88
+  description: ""
   orgIdentifier: default
-  tags: {}
-  stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Approval
-        spec:
-          execution:
-            steps:
-              - step:
-                  name: ap2
-                  identifier: ap1
-                  type: HarnessApproval
-                  timeout: 1d
-                  spec:
-                    approvalMessage: |-
-                      Please review the following information
-                      and approve the pipeline progression
-                    includePipelineExecutionHistory: true
-                    approvers:
-                      disallowPipelineExecutor: false
-                      userGroups: <+input>
-                      minimumCount: <+input>
-                    approverInputs: []
-        tags: {}
+  projectIdentifier: proj1_newgitx
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://34.67.13.218/
+        auth:
+          type: UsernamePassword
+          spec:
+            username: admin
+            passwordRef: k8s_secret
