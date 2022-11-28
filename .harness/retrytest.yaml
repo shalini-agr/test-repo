@@ -1,0 +1,29 @@
+pipeline:
+  name: retry-test
+  identifier: retrytest
+  projectIdentifier: Bhavya
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: approval step
+                  identifier: approval_step
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    approverInputs: []
+                    approvalMessage: asd
+        tags: {}
