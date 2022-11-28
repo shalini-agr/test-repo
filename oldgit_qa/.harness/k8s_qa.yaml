@@ -1,0 +1,17 @@
+connector:
+  name: k8s_qa
+  identifier: k8s_qa
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: vivek_qa_oldgit
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://34.67.13.218/
+        auth:
+          type: UsernamePassword
+          spec:
+            username: admin
+            passwordRef: k8s_qa_sec
