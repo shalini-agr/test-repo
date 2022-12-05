@@ -17,6 +17,6 @@ inputSet:
                 type: "HarnessApproval"
                 spec:
                   approvers:
-                    minimumCount: 1
+                    minimumCount: 2
                     userGroups:
                     - "account._account_all_users"
