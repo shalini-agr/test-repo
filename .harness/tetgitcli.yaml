@@ -1,0 +1,22 @@
+pipeline:
+  name: tetgitcli
+  identifier: tetgitcli
+  projectIdentifier: demo
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cs
+        identifier: cs
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: Wait
+                  identifier: Wait
+                  spec:
+                    duration: 10m
+        tags: {}
