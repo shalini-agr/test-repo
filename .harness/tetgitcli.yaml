@@ -18,5 +18,5 @@ pipeline:
                   name: Wait
                   identifier: Wait
                   spec:
-                    duration: 10m
+                    duration: 10s
         tags: {}
