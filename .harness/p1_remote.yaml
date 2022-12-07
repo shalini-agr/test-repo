@@ -1,0 +1,52 @@
+pipeline:
+  name: p1_remote
+  identifier: p1_remote
+  projectIdentifier: oldgit_proj1
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Deployment
+        spec:
+          serviceConfig:
+            serviceRef: srv1
+            serviceDefinition:
+              spec:
+                variables: []
+              type: Kubernetes
+          infrastructure:
+            environmentRef: env1
+            infrastructureDefinition:
+              type: KubernetesDirect
+              spec:
+                connectorRef: k8s
+                namespace: n1
+                releaseName: release-<+INFRA_KEY>
+            allowSimultaneousDeployments: false
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Shell Script
+                  identifier: ShellScript
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
