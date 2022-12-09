@@ -1,9 +1,4 @@
 pipeline:
-  name: p1_remote_2
-  identifier: p1_remote_2
-  projectIdentifier: newgit_Proj
-  orgIdentifier: default
-  tags: {}
   stages:
     - stage:
         name: s1
