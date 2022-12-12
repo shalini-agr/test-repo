@@ -1,4 +1,9 @@
 pipeline:
+  name: p1_remote
+  identifier: p1_remote
+  projectIdentifier: proj1
+  orgIdentifier: default
+  tags: {}
   stages:
     - stage:
         name: s1
