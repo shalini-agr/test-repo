@@ -28,3 +28,27 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: s2
+        identifier: s2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: sh2
+                  identifier: sh2
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>.executionInput()
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+                  failureStrategies: []
+        tags: {}
