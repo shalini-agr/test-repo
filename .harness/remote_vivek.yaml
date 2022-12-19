@@ -59,3 +59,7 @@ pipeline:
             default: ""
             description: ""
             value: <+input>.executionInput()
+          - name: var2
+            type: Number
+            description: ""
+            value: 4
