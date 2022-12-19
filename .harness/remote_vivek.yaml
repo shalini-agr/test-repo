@@ -55,6 +55,12 @@ pipeline:
                 rollbackSteps: []
               serviceDependencies: []
             tags: {}
+            variables:
+              - name: var11
+                type: String
+                default: "4"
+                description: ""
+                value: <+input>.executionInput().default(4)
     - stage:
         name: s2
         identifier: s3
