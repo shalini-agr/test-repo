@@ -5,30 +5,56 @@ pipeline:
   orgIdentifier: default
   tags: {}
   stages:
-    - stage:
-        name: s1
-        identifier: s2
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: sh2
-                  identifier: sh2
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
+    - parallel:
+        - stage:
+            name: s1
+            identifier: s2
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: sh2
+                      identifier: sh2
                       spec:
-                        script: <+input>.executionInput()
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-                  failureStrategies: []
-        tags: {}
+                        shell: Bash
+                        onDelegate: true
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>.executionInput()
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+                      failureStrategies: []
+            tags: {}
+        - stage:
+            name: s11
+            identifier: s11
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: sh1
+                      identifier: sh1
+                      spec:
+                        shell: Bash
+                        onDelegate: true
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>.executionInput()
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+                rollbackSteps: []
+              serviceDependencies: []
+            tags: {}
     - stage:
         name: s2
         identifier: s3
