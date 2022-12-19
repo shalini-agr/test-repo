@@ -6,29 +6,6 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: sh1
-                  identifier: sh1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: echo "Hi"
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
-    - stage:
         name: s2
         identifier: s2
         description: ""
