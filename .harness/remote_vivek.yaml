@@ -56,6 +56,6 @@ pipeline:
         variables:
           - name: var1
             type: String
-            default: Hello
+            default: ""
             description: ""
-            value: <+input>.executionInput().default(Hello)
+            value: <+input>.executionInput()
