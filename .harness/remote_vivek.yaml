@@ -29,3 +29,33 @@ pipeline:
                   timeout: 10m
                   failureStrategies: []
         tags: {}
+    - stage:
+        name: s3
+        identifier: s3
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: sh1
+                  identifier: sh1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+                  failureStrategies: []
+        tags: {}
+        variables:
+          - name: var1
+            type: String
+            default: Hello
+            description: ""
+            value: <+input>.executionInput().default(Hello)
