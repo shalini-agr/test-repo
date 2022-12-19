@@ -63,4 +63,4 @@ pipeline:
             type: String
             default: "4"
             description: ""
-            value: "4"
+            value: <+input>.executionInput().default(4)
