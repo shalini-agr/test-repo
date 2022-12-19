@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: s2
+        name: s1
         identifier: s2
         description: ""
         type: Custom
@@ -30,7 +30,7 @@ pipeline:
                   failureStrategies: []
         tags: {}
     - stage:
-        name: s3
+        name: s2
         identifier: s3
         description: ""
         type: Approval
