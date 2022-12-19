@@ -40,23 +40,21 @@ pipeline:
                 steps:
                   - step:
                       type: ShellScript
-                      name: sh1
-                      identifier: sh1
+                      name: sh11
+                      identifier: sh11
                       spec:
                         shell: Bash
                         onDelegate: true
                         source:
                           type: Inline
                           spec:
-                            script: <+input>.executionInput()
+                            script: echo "Hi"
                         environmentVariables: []
                         outputVariables: []
                       timeout: 10m
-                rollbackSteps: []
-              serviceDependencies: []
             tags: {}
             variables:
-              - name: var11
+              - name: var1
                 type: String
                 default: "4"
                 description: ""
