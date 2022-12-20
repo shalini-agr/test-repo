@@ -14,7 +14,7 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: ap3
+                  name: ap1
                   identifier: ap1
                   type: HarnessApproval
                   timeout: 1d
