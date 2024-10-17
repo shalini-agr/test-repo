@@ -1,0 +1,6 @@
+pipeline:
+  repo:
+    connector: github
+  stages:
+    - steps:
+        - run: echo "ok"
