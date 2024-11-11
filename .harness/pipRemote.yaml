@@ -1,4 +1,4 @@
 pipeline:
   stages:
     - steps:
-        - run: echo "ok"
+        - run: echo "okay"
