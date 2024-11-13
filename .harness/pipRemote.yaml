@@ -2,10 +2,10 @@ pipeline:
   clone:
     disabled: true
   inputs:
-    a:
+    ab:
       type: string
       value: abc
-  if: <+<+inputs.a>=="abcd">
+  if: <+<+inputs.ab>=="abcd">
   stages:
     - steps:
         - run:
