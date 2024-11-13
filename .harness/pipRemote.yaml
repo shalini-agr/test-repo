@@ -1,4 +1,12 @@
 pipeline:
+  clone:
+    disabled: true
+  inputs:
+    a:
+      type: string
+      value: abc
+  if: <+<+inputs.a>=="abc">
   stages:
     - steps:
-        - run: echo "okay"
+        - run:
+            script: echo "ok"
