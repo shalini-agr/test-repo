@@ -5,7 +5,7 @@ pipeline:
     a:
       type: string
       value: abc
-  if: <+<+inputs.a>=="abc">
+  if: <+<+inputs.a>=="abcd">
   stages:
     - steps:
         - run:
